@@ -11,7 +11,7 @@ jobs:
         run: echo ${{ github.event.pull_request.title }}
       - id: event
         run: |
-          test_files=`python3 -c "import re; print(re.search(r'START(.+?)END', '${{github.event.pull_request.body}}').group(1))"`
+          test_files=`python3 -c "import re; print(re.search(r'START(.+?)END', '""${{github.event.pull_request.body}}""").group(1))"`
           echo "::set-output name=tests::$test_files"
       - name: Run cypress test cases
         run: echo ${{steps.event.outputs.tests}}
