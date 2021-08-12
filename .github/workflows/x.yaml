@@ -10,5 +10,5 @@ jobs:
       - name: print
         run: echo ${{ github.event.pull_request.title }}
       - name: description
-        run: echo ${{ github.event.pull_request.body }}
+        run: ${{ github.event.pull_request.body }}
       
