@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: npm install .
       - name: print
         run: echo ${{ github.event.pull_request.title }}
+      - name: description
+        run: echo ${{ github.event.pull_request.description }}
