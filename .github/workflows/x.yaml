@@ -11,8 +11,7 @@ jobs:
         run: echo ${{ github.event.pull_request.title }}
       - id: event
         run: |
-          pip3 install re
-          test_files=`import re; python3 -c "print(re.search('START(.+?)END', '${{github.event.pull_request.body}}').group(1))"`
+          test_files=`import re; python3 -c "print(re.search(r'START(.+?)END', '${{github.event.pull_request.body}}').group(1))"`
           echo "::set-output name=tests::$test_files"
       - name: Run cypress test cases
         run: echo ${{steps.event.tests}}
