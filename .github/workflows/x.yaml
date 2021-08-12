@@ -10,4 +10,4 @@ jobs:
       - name: print
         run: echo ${{ github.event.pull_request.title }}
       - name: description
-        run: echo ${{ github.event.pull_request.description }}
+        run: echo ${{ github.event.pull_request.body }}
