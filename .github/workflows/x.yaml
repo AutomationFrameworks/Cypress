@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v1
       - name: print
         run: echo ${{ github.event.pull_request.title }}
-      - name: description
-        run: ${{ github.event.pull_request.body }}
+      # - name: description
+      #   run: ${{ github.event.pull_request.body }}
       - id: event
         run: |
           test_files=`import re; python3 -c 'print(re.search('START(.+?)END', ${{github.event.pull_request.body}}).group(1))'`
