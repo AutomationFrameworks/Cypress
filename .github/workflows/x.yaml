@@ -11,6 +11,4 @@ jobs:
         run: echo ${{ github.event.pull_request.title }}
       - name: description
         run: echo ${{ github.event.pull_request.body }}
-      - name: if
-        if: contains(github.event.pull_request.title, "RFR")
-        run: echo "rama"
+      
