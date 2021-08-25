@@ -1,4 +1,4 @@
-## Cypress
+## Cypress testing framework
 
 1. Install npm and node.js
 2. Install Cypress
